@@ -19,3 +19,25 @@ dados = data.frame(
   )
 )
 
+# Mostrar as proporções de cada categoria 
+genero_resumo = prop.table(table(dados$genero))
+
+genero_resumo = data.frame(
+  Categoria = names(genero_resumo),
+  Proporcao = round(as.numeric(genero_resumo) * 100, 1)
+)
+
+names(genero_resumo)[2] = "(%)"
+
+genero_resumo
+
+idade_resumo = prop.table(table(dados$faixa_etaria))
+
+idade_resumo = data.frame(
+  Categoria = names(idade_resumo),
+  Proporcao = round(as.numeric(idade_resumo) * 100, 1)
+)
+
+names(idade_resumo)[2] = "(%)"
+
+idade_resumo
