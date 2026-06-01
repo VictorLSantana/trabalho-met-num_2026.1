@@ -29,7 +29,7 @@ genero_resumo = data.frame(
 
 names(genero_resumo)[2] = "(%)"
 
-genero_resumo
+#genero_resumo
 
 idade_resumo = prop.table(table(dados$faixa_etaria))
 
@@ -40,4 +40,7 @@ idade_resumo = data.frame(
 
 names(idade_resumo)[2] = "(%)"
 
-idade_resumo
+#idade_resumo
+
+head(dados)
+table(dados$genero, dados$faixa_etaria)
